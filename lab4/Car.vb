@@ -6,7 +6,7 @@ Option Strict On
 Public Class Car
 
 #Region "Properties"
-
+    'declaring the object with the particular properties
     Shared carCount As Integer = 0
     Private carID As Integer = 0
     Private carMake As String = ""
@@ -18,11 +18,21 @@ Public Class Car
 #End Region
 
 #Region "Constructors"
+    ''' <summary>
+    ''' Creating Default Constructor.
+    ''' </summary>
     Public Sub New()
         carID = carCount
         carCount += 1
     End Sub
-
+    ''' <summary>
+    ''' Creating Parametarized Constructor.
+    ''' </summary>
+    ''' <param name="make"></param>
+    ''' <param name="model"></param>
+    ''' <param name="year"></param>
+    ''' <param name="price"></param>
+    ''' <param name="status"></param>
     Public Sub New(make As String, model As String, year As Integer, price As Decimal, status As Boolean)
         carID = carCount
         carCount += 1

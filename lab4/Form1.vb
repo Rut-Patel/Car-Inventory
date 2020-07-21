@@ -184,10 +184,6 @@ Public Class frmCarInventory
 
     End Sub
 
-    Private Sub ToolTip1_Popup(sender As Object, e As PopupEventArgs) Handles ToolTipCar.Popup
-
-    End Sub
-
 
 
 #End Region
