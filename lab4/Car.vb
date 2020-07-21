@@ -1,4 +1,5 @@
 ﻿
+
 Option Strict On
 ''' <summary>
 ''' Declaring a class named Car for storing the details of the car.
@@ -33,7 +34,7 @@ Public Class Car
     ''' <param name="year"></param>
     ''' <param name="price"></param>
     ''' <param name="status"></param>
-    Public Sub New(make As String, model As String, year As Integer, price As Decimal, status As Boolean)
+    Public Sub New(count As Integer, make As String, model As String, year As Integer, price As Decimal, status As Boolean)
         carID = carCount
         carCount += 1
         Me.Make = make
@@ -90,6 +91,7 @@ Public Class Car
             carNewStatus = value
         End Set
     End Property
+
 
     Public ReadOnly Property InternalCount() As Integer
         Get

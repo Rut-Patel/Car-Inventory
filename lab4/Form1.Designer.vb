@@ -132,7 +132,7 @@ Partial Class frmCarInventory
         Me.lvCarDisplay.FullRowSelect = True
         Me.lvCarDisplay.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
         Me.lvCarDisplay.HideSelection = False
-        Me.lvCarDisplay.Location = New System.Drawing.Point(12, 180)
+        Me.lvCarDisplay.Location = New System.Drawing.Point(12, 178)
         Me.lvCarDisplay.MultiSelect = False
         Me.lvCarDisplay.Name = "lvCarDisplay"
         Me.lvCarDisplay.Size = New System.Drawing.Size(474, 170)
@@ -160,10 +160,12 @@ Partial Class frmCarInventory
         'colYear
         '
         Me.colYear.Text = "Year"
+        Me.colYear.Width = 81
         '
         'colPrice
         '
         Me.colPrice.Text = "Price"
+        Me.colPrice.Width = 154
         '
         'btnEnter
         '
@@ -218,9 +220,6 @@ Partial Class frmCarInventory
         Me.txtOutput.Size = New System.Drawing.Size(474, 97)
         Me.txtOutput.TabIndex = 11
         Me.ToolTipCar.SetToolTip(Me.txtOutput, "Error Details")
-        '
-        'ToolTipCar
-        '
         '
         'frmCarInventory
         '

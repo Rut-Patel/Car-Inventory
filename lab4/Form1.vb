@@ -17,8 +17,8 @@ Public Class frmCarInventory
 
     Dim currentlySelectedIndex As Integer = -1
     Dim editmode As Boolean = False
-    Dim counter As Integer = 0
     Dim errorMessage As String = ""
+    Dim count As Integer = 0
 
 #End Region
 
@@ -35,6 +35,7 @@ Public Class frmCarInventory
         Dim inputYear As String = numYear.Text
         Dim inputPrice As String = txtPrice.Text
         Dim inputStatus As Boolean = ckCondition.Checked
+
 
         Dim car As Car
 
@@ -56,9 +57,9 @@ Public Class frmCarInventory
 
             Else
                 'This allows the user to add new data to the list.
-                car = New Car(inputMake, inputModel, CInt(inputYear), CDec(inputPrice), inputStatus)
+                car = New Car(count, inputMake, inputModel, CInt(inputYear), CDec(inputPrice), inputStatus)
                 cars.Add(car)
-                counter += 1
+                count += 1
                 ResetForm()
                 UpdateCardetails()
                 txtOutput.Text = "Car Added to records"
@@ -165,6 +166,7 @@ Public Class frmCarInventory
             lvCarDisplay.Items.Add(carlist)
         Next
     End Sub
+
     ''' <summary>
     ''' Method that reset the values from the form.
     ''' </summary>
